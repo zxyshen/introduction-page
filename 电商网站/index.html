@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/iconfont.css">
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./style/protected.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/TweenMax.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div id="index">
+        <div class="header">
+            <div class="top-bar-wrapper">
+                <div class="top-bar ow-hidden">
+                    <div class="fl">
+                        <a href="###" class="top-bar-one">收藏Z</a>
+                    </div>
+                    <div class="fr">
+                            <a href="###" class="login-btn ln">[登录]</a>
+                            <a href="###" class="register-btn rr">[免费注册]</a>
+                            <div id="user-form-box" class="dy-none">
+                                <div id="uf-title">
+                                    <a href="###" class="user-swap fl ln">登录</a>
+                                    <a href="###" class="user-swap fl rr">注册</a>
+                                    <a href="###" id="user-close-btn" class="fr"></a>
+                                </div>
+                                <form action="###" method="post" id="user-form">
+                                    <ul class="log">
+                                        <li><input type="text"  class="user-inp inp-onblur" ></li>
+                                        <li><input type="password" class="user-inp inp-onblur"></li>
+                                        <li>
+                                            <input type="checkbox" id="seven" >
+                                            <label for="seven" class="ck"><span></span>7天内自动登录</label>
+                                            <a href="###" id="lose_pw_btn" class="fr">忘记密码</a>
+                                        </li>
+                                        <li><a href="###" id="user-go">登录</a></li>
+                                    </ul>
+                                    <ul class="register dy-none"> 
+                                        <li><input type="text"  class="user-inp inp-onblur"></li>
+                                        <li><input type="password" class="user-inp inp-onblur"></li>
+                                        <li>
+                                            <input type="checkbox" id="agree" >
+                                            <label for="agree" class="ck"><span></span>同意注册协议</label>
+                                        </li>
+                                        <li><a href="###" id="user-go">注册</a></li>
+                                    </ul>
+                                </form>
+                                <div id="other-log">
+                                    <span>其他方式登陆</span>
+                                    <a href="###"><i class="icon-qq"></i></a>
+                                    <a href="###"><i class="icon-weixin"></i></a>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle-bar-wrapper">
+                <div class="middle-bar">
+                    <a href="###" class="logo"><img src="./images/logo.png"></a>
+                    <div class="search-form">
+                            <input type="text" name="search" class="search-inp inp-onblur"><!-- 
+                             --><a href="###" class="search-btn">搜索</a>
+                             <ul class="search-result-box dy-none"> 
+                                <!-- <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li> -->
+                             </ul>
+                    </div>
+                    <div class="shopcart-box">
+                        <a href="###" class="shopcart-show-btn">购物车</a><!-- 
+                        --><a href="###" class="shopinform-show-btn"><span class="inform-count">0</span></a>
+                        <div class="shopcart-result-box dy-none">
+                            <p class="shopcart-result-title"> 
+                                <span class="fl srt-s1">我的购物车</span>
+                                <span class="fr srt-s2">已加入<span class="goods-count">0</span>件商品</span>
+                            </p>
+                            <div class="goods-result">
+                                <div class="empty"></div>
+
+                                <div class="not-empty dy-none">
+                                    <ul>
+                                        <li class="goods">
+                                            <div class="fl">
+                                                <!-- 商品缩略图 -->
+                                            </div>
+                                            <div class="fr">
+                                                <!-- 价格之类的 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a class="goods-result-more" href="###">更多</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shopinform-box dy-none">
+                            <span class="inform">暂无通知</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-wrapper">
+                <div class="nav">
+                    <span href="###" class="nav-one">全部商品分类 <span class="triangle-down"></span></span>
+                    <ul>
+                        <li><a href="###">数码城</a></li>
+                        <li><a href="###">天黑黑</a></li>
+                        <li><a href="###">团购</a></li>
+                        <li><a href="###">发现</a></li>
+                        <li><a href="###">二手市场</a></li>
+                        <li><a href="###">名品会</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="to-top">
+            <div class="rocket"></div>
+        </div>
+
+        <div id="content_wrapper">
+            <ul class="bg-light">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="content">
+                <div id="ct-sup" class="ow-hidden">
+                    <div class="ct-sup-aside fl ow-hidden">
+                        <ul class="nav-one-downmenu">
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">手机 数码<span style="color:#fff;">合约机</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">
+                                    <li><a href="###">荣耀3x</a></li>
+                                    <li><a href="###">单反</a></li>
+                                    <li><a href="###">智能设备</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">电脑 硬件外设<span style="color:#fff;">装机宝</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">
+                                    <li><a href="###">笔记本</a></li>
+                                    <li><a href="###">台式机</a></li>
+                                    <li><a href="###">超级本</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">大家电<span style="color:#fff;">直达</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">
+                                    <li><a href="###">电视</a></li>
+                                    <li><a href="###">空调</a></li>
+                                    <li><a href="###">冰箱</a></li>
+                                    <li><a href="###">洗衣机</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">厨房电器 生活电器</h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">
+                                    <li><a href="###">电视</a></li>
+                                    <li><a href="###">空调</a></li>
+                                    <li><a href="###">冰箱</a></li>
+                                    <li><a href="###">洗衣机</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">食品/饮料/生鲜<span style="color:#fff;">粮油</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">
+                                    <li><a href="###">进口</a></li>
+                                    <li><a href="###">方便面</a></li>
+                                    <li><a href="###">零食</a></li>
+                                    <li><a href="###">保健品</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">汽车/二手车/用品<span style="color:#fff;">进口</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">    
+                                    <li><a href="###">SUV</a></li>
+                                    <li><a href="###">MPV</a></li>
+                                    <li><a href="###">跑车</a></li>
+                                    <li><a href="###">越野车</a></li>
+                                </ul>
+                            </li>
+                            <li class="ow-hidden">
+                                <h2 class="tw-title">房产/装修/建材<span style="color:#fff;">原木</span></h2>
+                                <span class="triangle-right"></span>
+                                <ul class="tw">    
+                                    <li><a href="###">全包</a></li>
+                                    <li><a href="###">半包</a></li>
+                                    <li><a href="###">全套设计</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tw-right dy-none">
+                            <!-- <ul class="tt-1">
+                                    <li>
+                                    <span>家电</span>
+                                    <ul class="tt-2">
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span>家电</span>
+                                    <ul class="tt-2">
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span>家电</span>
+                                    <ul class="tt-2">
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                        <li><a href="###">单反相机</a></li>
+                                    </ul>
+                                </li> 
+                            </ul> -->
+                        </div>
+                    </div>
+                    
+                    <div class="ct-sup-main ow-hidden">
+                        <!-- 图片还未加载进来时，先来一个转圈圈的效果 -->
+                        <div class="loader"><img src="./images/loader.gif"></div>
+                        <!-- 轮播图 -->
+                        <ul class="ct-sup-screen" data-play="auto" data-page=1>
+                                <li><a href="###"></a></li>
+                                <li class="dy-none"><a href="###"></a></li>
+                                <li class="dy-none"><a href="###"></a></li>
+                                <li class="dy-none"><a href="###"></a></li>
+                                <li class="dy-none"><a href="###"></a></li>
+                        </ul>
+
+                        <!-- 左右按钮 -->
+                        <a href="###" class="prev md-flip-btn"></a>
+                        <a href="###" class="next md-flip-btn"></a>
+
+                        <!-- 下方按钮 -->
+                        <ul class="ct-flip-box">
+                            <li><a href="###" class="ct-flip-btn ct-flip-btn-hover"></a></li>
+                            <li><a href="###" class="ct-flip-btn"></a></li>
+                            <li><a href="###" class="ct-flip-btn"></a></li>
+                            <li><a href="###" class="ct-flip-btn"></a></li>
+                            <li><a href="###" class="ct-flip-btn"></a></li>
+                        </ul>                        
+                    </div>
+                </div>
+                <div id="ct-sub">
+                    <div class="section">
+                        <div class="st-sup ow-hidden">
+                            <h2 class="section-title fl"><img src="./images/section-1.png"></h2>
+                            <a href="###" class="stp-more-btn fr">更多>></a>
+                        </div>
+
+                        <div class="st-sub ow-hidden">
+                            <div class="fl ptr">
+                                <ul class="section-aisde-screen ow-hidden" data-play="auto">
+                                    <li><img src="./images/section-aside-screen-1.png"><a href="###"></a></li>
+                                </ul>
+                                <a href="###" class="screen-more"></a>
+                                <ul class="stb-aside-flip-box pta">
+                                    <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="ptr ow-hidden stb-main">
+                                <ul class="stb-main-sup ow-hidden">
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                    </li>         
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                    </li>    
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                    </li>                               
+                                </ul>
+                                <ul class="stb-main-sub  ow-hidden">
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="section">
+                            <div class="st-sup ow-hidden">
+                                <h2 class="section-title fl"><img src="./images/section-1.png"></h2>
+                                <a href="###" class="stp-more-btn fr">更多>></a>
+                            </div>
+
+                            <div class="st-sub ow-hidden">
+                                <div class="fl ptr">
+                                    <ul class="section-aisde-screen ow-hidden" data-play="auto">
+                                        <li><img src="./images/section-aside-screen-1.png"><a href="###"></a></li>
+                                    </ul>
+                                    <a href="###" class="screen-more"></a>
+                                    <ul class="stb-aside-flip-box pta">
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ptr ow-hidden stb-main">
+                                    <ul class="stb-main-sup ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>         
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>    
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>                               
+                                    </ul>
+                                    <ul class="stb-main-sub  ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="section">
+                            <div class="st-sup ow-hidden">
+                                <h2 class="section-title fl"><img src="./images/section-1.png"></h2>
+                                <a href="###" class="stp-more-btn fr">更多>></a>
+                            </div>
+
+                            <div class="st-sub ow-hidden">
+                                <div class="fl ptr">
+                                    <ul class="section-aisde-screen ow-hidden" data-play="auto">
+                                        <li><img src="./images/section-aside-screen-1.png"><a href="###"></a></li>
+                                    </ul>
+                                    <a href="###" class="screen-more"></a>
+                                    <ul class="stb-aside-flip-box pta">
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ptr ow-hidden stb-main">
+                                    <ul class="stb-main-sup ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>         
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>    
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>                               
+                                    </ul>
+                                    <ul class="stb-main-sub  ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="section">
+                            <div class="st-sup ow-hidden">
+                                <h2 class="section-title fl"><img src="./images/section-1.png"></h2>
+                                <a href="###" class="stp-more-btn fr">更多>></a>
+                            </div>
+
+                            <div class="st-sub ow-hidden">
+                                <div class="fl ptr">
+                                    <ul class="section-aisde-screen ow-hidden" data-play="auto">
+                                        <li><img src="./images/section-aside-screen-1.png"><a href="###"></a></li>
+                                    </ul>
+                                    <a href="###" class="screen-more"></a>
+                                    <ul class="stb-aside-flip-box pta">
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ptr ow-hidden stb-main">
+                                    <ul class="stb-main-sup ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>         
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>    
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>                               
+                                    </ul>
+                                    <ul class="stb-main-sub  ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="section">
+                            <div class="st-sup ow-hidden">
+                                <h2 class="section-title fl"><img src="./images/section-1.png"></h2>
+                                <a href="###" class="stp-more-btn fr">更多>></a>
+                            </div>
+
+                            <div class="st-sub ow-hidden">
+                                <div class="fl ptr">
+                                    <ul class="section-aisde-screen ow-hidden" data-play="auto">
+                                        <li><img src="./images/section-aside-screen-1.png"><a href="###"></a></li>
+                                    </ul>
+                                    <a href="###" class="screen-more"></a>
+                                    <ul class="stb-aside-flip-box pta">
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                        <li><a href="###" class="stb-aside-flip-btn"></a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ptr ow-hidden stb-main">
+                                    <ul class="stb-main-sup ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>         
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>    
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sup-1.png" alt=""></a>
+                                        </li>                               
+                                    </ul>
+                                    <ul class="stb-main-sub  ow-hidden">
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="###"><img src="./images/stb-main-sub-1.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <a href="https://github.com/you"><img style="z-index:1;position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+
+        <div class="footer-wrapper">
+            <div class="footer">
+                <p class="end">——————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;END&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——————</p>
+            </div>
+        </div>
+        <div class="wmask dy-none"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+*{
+    font-family: '微软雅黑';
+}
+body{
+    line-height: 1.2;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.pta{
+    position: absolute;
+}
+.ptr{
+    position: relative;
+}
+.ow-hidden{
+    overflow: hidden;
+}
+
+.equalHeight{
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.dy-none{
+    display: none;
+}
+
+/* 下三角 */
+.triangle-down{
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+/* 右三角 */
+.triangle-right{
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 10px;
+    border-left: 10px solid rgba(255, 255, 255, 0.6);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+
+/* 遮盖布 */
+.wmask{
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0,0.8);
+}

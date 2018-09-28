@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon " href="./img/shortcut2.ico"/>
+    <script src="../../js/jquery.js"></script>
+    <script src="./js/zjs.js"></script>
+    <script src="./js/jquery.mousewheel.js"></script>
+    <script src="../../js/TweenMax.js"></script>
+    <script src="./js/main.js"></script>
+    
+</head>
+<body>
+    <!-- 固定头部 -->
+    <div id="header">
+        <div class="headerNav">
+            <!-- headerLogo -->
+            <a class="headerLogo" href="###"></a>
+            <!-- 导航 -->
+            <ul class="nav">
+                <mark class="markLine"></mark>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">THE TEAM</a></li>
+                <li><a href="">RESULTS</a></li>
+            </ul>
+            <!-- 下划线 -->
+            <!-- 下拉菜单 -->
+            <div class="select">
+                <span>EN</span>
+                <ul class="language">
+                    <li><a href="###">EN</a></li>
+                    <li><a href="###">ES</a></li>
+                </ul>
+            </div>
+            <!-- 关注 -->
+            <div class="Follow-box" id="box3D1">
+                <!-- 3D空间 -->
+                <div class="space">
+                    <!-- 盒子正面 -->
+                    <a class="FollowMe prev" href="###">START DIAGNOSIS FOR ME</a>
+                    <!-- 盒子侧面 -->
+                    <a class="FollowMe back" href="###">START DIAGNOSIS FOR ME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+    <!--固定可视区，然后切换scene  -->
+    <div id="wrapper">
+
+
+
+
+
+
+
+        <!-- 第一页 -->
+        <div id="scene1" class="scene">
+            <!-- 为了作出折半背景效果 -->
+            <div class="halfBg"></div>
+            <!-- 炫光 -->
+            <img class="lightBg"src="./img/scene1/ligth_green.png" >
+            <!-- 第一页logo -->
+            <img class="scene1Logo" src="./img/scene1/logo_scene1.png">
+            <!-- 主体 -->
+            <div class="sceneContent" id="scene1Content">
+                <p><img src="./img/scene1/scena1_center1.png"></p>
+                <p><img src="./img/scene1/scena1_center2.png"></p>
+                <p><img src="./img/scene1/scena1_center3.png"></p>
+            </div>
+            <!-- 左路灯 -->
+            <img class="lightLeft" src="./img/scene1/light_left.png">
+            <!-- 右路灯 -->
+            <img class="lightRight" src="./img/scene1/light_right.png">
+        </div>
+        
+
+
+
+
+
+
+
+
+        <!-- 第二页 -->
+        <div id="scene2" class="scene" >
+            <!-- 横向翻页按钮 -->
+            <a href="###" class="horFlip Sprev "></a>
+            <a href="###" class="horFlip Snext "></a>
+            <!-- 第二页下有四个小页面 -->
+            <div class="halfBg"></div>
+            <img class="lightBg"  src="./img/scene2/ligth_purple.png" >
+            <div class="sceneContent step" id="step1" >
+                <p><img src="./img/scene2/step1/step_1.png"></p>
+                <p><img src="./img/scene2/step1/step_2.png"></p>
+                <p><img src="./img/scene2/step1/step_3.png"></p>
+                <p><img src="./img/scene2/step1/step_4.png"></p>
+            </div>
+            <div class="sceneContent step" id="step2" >
+                <div class="leftContent"><img src="./img/scene2/step2/step_l.gif"></div>
+                <div class="rightContent">
+                    <p style="margin-top:40px;"><img src="./img/scene2/step2/step_1.png" ></p>
+                    <p><img src="./img/scene2/step2/step_2.png" ></p>
+                    <p><img src="./img/scene2/step2/step_3.png" ></p>
+                </div>
+            </div>
+            <div class="sceneContent step" id="step3"  >
+                <div class="leftContent"><img src="./img/scene2/step3/step_l.gif"></div>
+                <div class="rightContent">
+                    <p style="margin-top:40px;"><img src="./img/scene2/step3/step_1.png" ></p>
+                    <p><img src="./img/scene2/step3/step_2.png" ></p>
+                    <p><img src="./img/scene2/step3/step_3.png" ></p>
+                </div>
+            </div>
+            <div class="sceneContent step" id="step4" >
+                <div class="leftContent"><img src="./img/scene2/step4/step_l.png"></div>
+                <div class="rightContent">
+                    <p style="margin-top:20px;"><img src="./img/scene2/step4/step_1.png" ></p>
+                    <p><img src="./img/scene2/step4/step_2.png" ></p>
+                    <p><img src="./img/scene2/step4/step_3.png" ></p>
+                </div>
+            </div>
+
+            <ul class="subNav">
+                <li class="subNavFont">&#xe520;</li>
+                <li class="subNavFont">&#xe520;</li>
+                <li class="subNavFont">&#xe520;</li>
+                <li class="subNavFont">&#xe520;</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 第三页 -->
+        <div id="scene3" class="scene" >
+            <div class="halfBg"></div>
+            <img class="lightBg"src="./img/scene3/ligth_orange.png" >
+            <div class="sceneContent" id="scene3Content">
+                <div id="s3to1">
+                    <p><img src="./img/scene3/step_1.png"></p>
+                    <p><img src="./img/scene3/step_2.png"></p>
+                    <p><img src="./img/scene3/step_3.png"></p>
+                </div>
+                <div id="s3to2" >
+                    <img src="./img/scene3/step_4.png">
+                    <p><img src="./img/scene3/step_5.png"></p>
+                    <p><img src="./img/scene3/step_6.png"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- 第四页 -->
+        <div id="scene4" class="scene" >
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- 第五页 -->
+        <div id="scene5" class="scene" >
+            <!-- 为了作出折半背景效果 -->
+            <div class="halfBg"></div>
+            <!-- 炫光 -->
+            <img class="lightBg"src="./img/scene1/ligth_green.png" >
+            <img class="lightTop" src="./img/scene5/scene5_1.png" alt="">
+            <div class="sceneContent" id="scene5Content">
+                <p><img src="./img/scene5/scene5_2.png"></p>
+                    <!-- 关注 -->
+                <div class="Follow-box" id="box3D2">
+                    <!-- 3D空间 -->
+                    <div class="space">
+                    <!-- 盒子正面 -->
+                    <a href="###" class="FollowMe prev">START DIAGNOSIS FOR ME</a>
+                    <!-- 盒子侧面 -->
+                    <a href="###" class="FollowMe back">START DIAGNOSIS FOR ME</a>
+                    </div>
+                </div>
+                <p><img href="./img/scene5/scene5_3.png"></p>
+                <div class="optionBox">
+                    <div class="Follow-box" id="box3D3">
+                        <!-- 3D空间 -->
+                        <div class="space">
+                            <!-- 盒子正面 -->
+                            <a href="###" class="FollowMe prev">START DIAGNOSIS FOR ME</a>
+                            <!-- 盒子侧面 -->
+                            <a href="###" class="FollowMe back">START DIAGNOSIS FOR ME</a>
+                        </div>
+                    </div>
+                    <div class="Follow-box" id="box3D4">
+                        <!-- 3D空间 -->
+                        <div class="space">
+                            <!-- 盒子正面 -->
+                            <a href="###" class="FollowMe prev">START DIAGNOSIS FOR ME</a>
+                            <!-- 盒子侧面 -->
+                            <a href="###" class="FollowMe back">START DIAGNOSIS FOR ME</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第四页 -->
+        <div id="scene6" class="scene" >
+        </div>
+
+
+        <a><i class="nextFont next">&#xe668;</i></a>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <!--固定页脚  -->
+    <div id="footer">
+        
+    </div>
+</body>
+</html>

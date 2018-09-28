@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+            const iWidth=200;
+            const iMar=10;
+            const iouterWidth=iWidth+iMar;
+            const surl= 'http://www.wookmark.com/api/json/popular?callback=?';
+
+            let cols=0;
+            let iPage=0;
+            let lock=true;
+            let $container=$('#container');
+            let $loader=$('#loader');
+            let colsT_arr=new Array;
+            let colsL_arr=new Array;
+
+
+            function countCols(){
+                cols=Math.floor($(window).innerWidth()/iouterWidth);
+                $container.css('width',cols*iouterWidth-10);
+            }
+            function initColsArr(){
+                for(let i=0;i<cols;i++){
+                    colsT_arr[i]=0;
+                    colsL_arr[i]=iouterWidth*i;
+                }
+            }
+
+            countCols();
+            initColsArr();
+
+            function findShort(arr){
+                let min=arr[0];
+                let minIndex=0;
+                for(let i=0;i<arr.length;i++){
+                    (min>arr[i])&&(minIndex=i);
+                }
+                return minIndex;
+            }
+            
+            function doData(){
+                if(!lock)
+                    return;
+                lock=false;
+                $loader.show();
+                
+                $.getJSON(surl,{'page':iPage,'time':new Date},function(data){
+                    $loader.hide();
+                    $.each(data,function(i,v){
+                        let short=findShort(colsT_arr);
+                        // let oImg=new Image();
+                        // oImg.src=v.preview;
+                        // with(oImg.style){
+                        //     width=iWidth+'px';
+                        // }
+                        // $container.append(oImg);
+                        // oImg.onload=function(){
+                        //     console.log(1);
+                        // }
+                        let $img=$('<img />');
+                        let w=iWidth;
+                        let h=iWidth/v.width*v.height;
+                        $img.css({
+                            'width':w,
+                            'height':h,
+                            'position':'absolute',
+                            'left':colsL_arr[short],
+                            'top':colsT_arr[short]
+                        });         
+                        colsT_arr[short]+=h+iMar;
+                        
+                        $container.append($img);
+                        let oImg=new Image;
+                        oImg.src=v.preview;
+                        oImg.onload=function(){
+                            $img.attr('src',this.src);
+                        }   
+                    })
+                    iPage++;
+                    lock=true;
+                })
+            }
+            doData();
+            $(window).on('scroll DOMMouseScroll',function(){
+                var short =findShort(colsT_arr);
+                var iH = $(window).scrollTop() + $(window).innerHeight();
+                if (colsT_arr[short] + 40 < iH) {
+			        doData();
+		        }
+            })
+
+            $(window).on('resize',function(){
+                let sCols=cols;
+                countCols();
+                if(sCols==cols)
+                    return;
+                    
+                initColsArr();
+
+                $container.find('img').each(function(i,v){
+                    let short=findShort(colsT_arr);
+                    $(v).css({
+                        'left':colsL_arr[short],
+                        'top':colsT_arr[short]
+                    })
+                    colsT_arr[short]+=$(v).height()+iMar;
+                })
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 100%;
+            position: relative;
+            margin: 50px auto 0;
+        }
+        img{
+            transition: 1s left,1s top;    
+        }
+        #loader{
+            width: 100%;
+            padding-top: 5%;
+            position: fixed;
+            bottom: 0px;
+            z-index: 100;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="loader"><img src="./loader.gif" /></div>
+    </div>
+</body>
+</html>

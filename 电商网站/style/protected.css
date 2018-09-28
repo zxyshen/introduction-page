@@ -1,0 +1,525 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#index .inp-onblur{
+    color: #bdbdbd;
+}
+
+
+#index .search-form .inp-onblur{
+    color: #000000;
+}
+
+
+/* 头部 */
+.top-bar-wrapper,.middle-bar-wrapper,.nav-wrapper,.footer-wrapper{
+    min-width: 1000px;
+}
+
+.header .top-bar-wrapper{
+    background: #f7f7f7;
+}
+.header .middle-bar-wrapper{
+    background: #1d7ad9;
+}
+.header .nav-wrapper{
+    background: #1369c0;
+    box-shadow: -4px 3px 8px rgb(53, 52, 52);
+    position: relative;
+    z-index: 1;
+}
+
+.header .top-bar,.middle-bar,.nav{
+    width: 1000px;
+    margin: 0 auto;
+}
+.header .top-bar{
+    height: 20px;
+    line-height: 20px;
+}
+
+.header .top-bar-one{
+    background: url('../images/top-bar-onebg.png') no-repeat left 2px;
+    padding-left: 12px;
+    font-size: 12px;
+    color:#222;
+}
+
+.header .login-btn,.register-btn{
+    color: #778;
+    font-size: 12px;
+}
+
+
+
+.header .middle-bar{
+    box-sizing: border-box;
+    height: 86px;
+    padding: 12px 0;
+    line-height: 59px;
+    position: relative;
+}
+.header .logo{
+    width: 112px;
+    height: 59px;
+    margin-left: 30px;
+    float: left;
+    display: block;
+    margin-right: -30%;
+    position: absolute;
+    left: -500px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* shop-cart */
+.header .shopcart-box{
+    float: right;
+    height: 59px;
+    position: relative;
+    margin-left: -22%;
+}
+.header .shopcart-show-btn{
+    width: 88px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    text-indent: 32px;
+    vertical-align: middle;
+    color: #fff;
+    background: #f19737 url('../images/shopcart.png') no-repeat 6px center;
+    border-right: 1px solid rgba(255, 255, 255,0.2);
+    border-radius: 0 8px;
+}
+.header .shopinform-show-btn{
+    width: 58px;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    display: inline-block;
+    background: #f19737 url('../images/shopcart-down-bg.png') no-repeat 36px center;
+    border-radius: 0 8px;
+}
+.header .inform-count{
+    padding-left: 16px;
+    color: #fff;
+    font-size: 14px;
+}
+.shopinform-box{
+    box-sizing: border-box;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    left: 90px;
+    background: #fff;
+    box-shadow: 4px 4px 10px #000;
+    border-radius: 0 0 10px 5px;
+    z-index: 2;
+}
+.inform{
+    font-size: 13px;
+    color: #787d82;
+}
+.shopcart-result-box{
+    box-sizing: border-box;
+    padding: 10px 18px;;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    left: -263px;
+    background: #fff;
+    box-shadow: 4px 4px 10px #000;
+    border-radius: 0 0 10px 5px;
+    z-index: 2;
+}
+.shopcart-result-title{
+    height: 59px;
+    border-bottom: 1px solid #d9dde1;
+}
+.srt-s1{
+    font-size: 18px;
+    padding-left: 6px;
+}
+.srt-s2{
+    font-size: 13px;
+    color: #787d82;
+    padding-right: 14px;
+}
+.srt-s2 .goods-count{
+    font-size: 14px;
+    color: #787d82;
+    padding-left: 0px;
+}
+.empty{
+    height: 180px;
+    background: url('../images/empty.png') no-repeat -5px;
+}
+
+
+.not-empty li{
+    height: 100px;
+}
+
+.goods-result-more{
+    line-height: normal;
+    display: block;
+    text-align: center;
+    color: #787d82;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* search-form */
+.header .search-form{
+    width: 48%;
+    margin-left: 30%;
+    margin-right: 22%;
+    float: left;
+    height: 59px;
+    position: relative;
+    z-index: 2;
+}
+.header .search-result-box{
+    width: 81%;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    top: 50px;
+    left: 4px;
+    z-index: 1;
+    /* 解释一下这个1 */
+    /* 
+        目的：不被下面的图片遮盖住。
+        解释：按理说，这里绝对定位了，应该是稳稳的可以盖住下面的图片啊
+        为啥会被图片盖住呢？
+
+        这就是层叠水平的问题了。此处如果不用absolute+z-index:1创建层叠上下文。
+        使之层叠水平为最高级6级，则层叠水平为5级。
+
+        而下面的ct-sup-main，即img的盒子设置了relative。所以层叠水平也为5级。
+        当二者层叠水平相等时，按照后来居上的原则，所以图片会盖住这个absolute。
+    */
+}
+.header .search-result-box li{
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding-left: 12px;
+}
+.header .search-result-box li:nth-of-type(1){
+    padding-top: 8px;
+}
+.header .search-result-box li:nth-last-of-type(1){
+    padding-bottom: 10px;
+}
+.search-result-box li:hover{
+    padding-left: 26px;
+}
+.header .search-inp{
+    border-radius: 8px;
+    width: 360px;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    background: url('../images/search.png')rgba(240, 220, 220,0.8) 6px center no-repeat;
+    padding-left: 2.8em;
+    font-size: 13px;
+    opacity: 0.5;
+}
+.header .search-inp-focus{
+    opacity: 1;
+}
+.header .search-btn{
+    padding: 9px 20px;
+    background: #f19737;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 8px;
+}
+.header .search-btn:hover,.header .shopinform-show-btn:hover,.header .shopcart-show-btn:hover{
+    background-color: #dd8d3c;
+}
+
+
+
+
+
+/* nav */
+.header .nav{
+    height: 35px;
+    line-height: 35px;
+}
+.header .nav-one{
+    color: #fff;
+    display: block;
+    float: left;
+    width: 189px;
+    height: 35px;
+    text-align: center;
+    background: #2c85dd;
+}    
+
+.header .nav-one span{
+    margin-left: 2px;
+}
+
+.header .nav ul{
+    float: left;
+}
+.header .nav li{
+    float: left;
+}
+.header .nav li a{
+    display: block;
+    height: 35px;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.footer-wrapper{
+    background: #F4F4F4;
+}
+
+
+
+
+
+/* 页尾 */
+.footer{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding:20px 0px 40px;
+}
+
+.end{
+    color: #CCCCD0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 登录框 */
+#user-form-box{
+    width: 360px;
+    height: 363px;
+    position: fixed;
+    padding: 0 20px 0px;
+    left: 0px;
+    top: 0px;        
+    /* -100 */
+    right: 0px;
+    margin: auto;
+    z-index: 101;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px #fff;
+}
+#user-form-box *{
+    color: #787d82;
+}
+#uf-title{
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 1px solid #d0d6d9;
+}
+
+.user-swap{
+    display: block;
+    width: 80px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.4s;
+    border-bottom: 1px solid #d0d6d9;
+}
+
+#user-form-box .user-swap-hover,#user-form-box .user-swap:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+#user-close-btn{
+    width: 24px;
+    height: 24px;
+    margin-top: 14px;
+    transition: 0.4s;
+    background: url('../images/user-close.png') no-repeat;
+}
+#user-close-btn:hover{
+    transform: rotate(120deg);
+}
+
+#user-form{
+    height: 244px;
+    padding: 30px 10px 0px;
+    box-sizing: border-box;    
+}
+
+#user-form li{
+    margin-bottom:  20px;
+}
+.user-inp{
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    text-indent: 0.6em;
+    font-size: 15px;
+    border: 1px solid #d0d6d9;
+}
+#seven,#agree{
+    display: none;  
+}
+#user-form .ck{
+    font-size: 13px;
+}
+
+#user-form .ck span{
+    vertical-align: -1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 2px solid #787d82;
+    transition: 0.4s;
+}
+#lose_pw_btn{
+    font-size: 13px;
+}
+#lose_pw_btn:hover{
+    color: red;
+}
+#seven:checked+.ck span{
+    background: rgb(8, 137, 223);
+}
+#agree:checked+.ck span{
+    background: rgb(8, 137, 223);
+}
+#user-go{
+    display: block;
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    color: #fff;
+    font-size: 16px;
+    background: rgba(0, 174, 255,0.8);
+}
+
+#other-log{
+    margin-top: 18px;
+    padding: 0 10px;
+}
+#other-log span{
+    font-size: 13px;
+    vertical-align: middle;
+}
+#other-log a{
+    vertical-align: middle;
+    padding-left: 12px;
+}
+#other-log a i{
+    transition: 0.4s;
+}
+#other-log a:nth-of-type(1):hover i{
+    color: rgb(0, 132, 255);
+}
+#other-log a:nth-of-type(2):hover i{
+    color: rgb(17, 141, 48);
+}
+
+
+
+/* 小火箭 */
+
+.to-top{
+    position: fixed;
+    width: 60px;
+    height: 130px;
+    background: url('../images/rocket.png') -32px -18px no-repeat;
+    cursor: pointer;
+    right: 40px;
+    bottom: 10px;
+    display: none;
+    z-index: 1;
+}
+.to-top .rocket{
+    width: 60px;
+    height: 130px;
+    background: url('../images/rocket.png') -157px -18px no-repeat;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 页脚 */
+.footer-wrapper{
+    background: #F8FAFC;
+    margin-top: 80px;
+}
+.footer{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding:100px 0px 100px;
+}
+.end{
+    color: rgb(173, 173, 173);
+}
